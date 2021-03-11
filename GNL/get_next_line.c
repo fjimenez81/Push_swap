@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fjimenez <fjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 09:53:29 by fjimenez          #+#    #+#             */
-/*   Updated: 2019/12/11 19:27:41 by fjimenez         ###   ########.fr       */
+/*   Updated: 2019/12/12 07:34:55 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static	int	ft_return(char **str, char **line, int fd, int bytes)
 		*line = ft_strdup(str[fd]);
 		ft_strdel(&str[fd]);
 		return (0);
-	}	
+	}
 }
 
 int			get_next_line(int fd, char **line)
@@ -64,9 +64,9 @@ int			get_next_line(int fd, char **line)
 	static char *str[4096];
 
 	if (fd < 0 || line == NULL || BUFFER_SIZE <= 0 ||
-		 (!(buf = (char*)malloc(sizeof(char) * BUFFER_SIZE + 1))))
+		(!(buf = (char*)malloc(sizeof(char) * BUFFER_SIZE + 1))))
 		return (-1);
-	while ((bytes = read(fd, buf,  BUFFER_SIZE)) > 0)
+	while ((bytes = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
 		buf[bytes] = '\0';
 		if (str[fd] == NULL)

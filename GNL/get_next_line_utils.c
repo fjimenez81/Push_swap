@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fjimenez <fjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/09 11:19:47 by fjimenez          #+#    #+#             */
-/*   Updated: 2019/12/09 11:19:47 by fjimenez         ###   ########.fr       */
+/*   Created: 2019/12/12 07:36:50 by fjimenez          #+#    #+#             */
+/*   Updated: 2019/12/12 07:59:24 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t 	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t i;
 
@@ -40,11 +40,11 @@ char	*ft_strchr(const char *s1, int c)
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char    *dest;
-	size_t  lens1;
-	size_t  lens2;
-	size_t  i;
-	size_t  j;
+	char	*dest;
+	size_t	lens1;
+	size_t	lens2;
+	size_t	i;
+	size_t	j;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -65,7 +65,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 char	*ft_strdup(const char *s)
 {
 	char		*ps;
-	char 		*res;
+	char		*res;
 	size_t		len;
 	size_t		i;
 
