@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:30:15 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/08 17:11:06 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 17:40:24 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,17 @@ int                 ft_handle_s(t_stack **st, char *s);
 int                 ft_handle_p(t_stack **first, t_stack **second, char *s);
 int                 ft_handle_r(t_stack **st, char *s);
 int                 ft_handle_rr(t_stack **st, char *s);
+int                 ft_check_maxnum(t_stack *st);
+int                 ft_check_minnum(t_stack *st);
+int                 ft_sorted(t_stack *st, int flag);
+int                 ft_stack_size(t_stack *st);
+void                ft_search_min(t_stacks *sts);
+void                ft_sort_three(t_stacks *sts);
+void                ft_sort_fourty(t_stacks *sts);
+void                ft_check_stb(t_stacks *sts);
+void                ft_check_sta(t_stacks *sts);
+void                ft_change_stack_a(t_stacks *sts, int max);
+void                ft_change_stack_b(t_stacks *sts, int max);
+int                 ft_search_max(t_stacks *sts, int flag);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 09:37:43 by fjimenez          #+#    #+#              #
-#    Updated: 2021/03/08 10:23:12 by fjimenez         ###   ########.fr        #
+#    Updated: 2021/03/11 17:39:12 by fjimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,12 @@ SRC_CHECKER =	checker \
 
 SRC_PUSH_SWAP = push_swap \
 				utils \
+				utils2 \
 				push_stack \
 				pop_stack \
 				handle_cmd \
+				check_stacks \
+				sort_stacks \
 
 CF_CHECKER = $(addsuffix .c, $(SRC_CHECKER))
 
