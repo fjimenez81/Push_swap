@@ -6,16 +6,16 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 09:41:40 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 18:34:53 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:19:18 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_check_limit(t_stack *st, int limit)
+int		ft_check_limit(t_stack *st, int limit)
 {
 	t_stack *tmp;
-	
+
 	tmp = st;
 	while (tmp)
 	{
@@ -26,7 +26,7 @@ int ft_check_limit(t_stack *st, int limit)
 	return (0);
 }
 
-void ft_change_pack(t_stacks *sts, int limit)
+void	ft_change_pack(t_stacks *sts, int limit)
 {
 	while (sts->a && ft_check_limit(sts->a, limit))
 	{
@@ -41,7 +41,7 @@ void ft_change_pack(t_stacks *sts, int limit)
 	ft_change_stack_b(sts, ft_search_max(sts, 0));
 }
 
-void ft_sort_infinite(t_stacks *sts)
+void	ft_sort_infinite(t_stacks *sts)
 {
 	int pack;
 	int div;
@@ -57,7 +57,7 @@ void ft_sort_infinite(t_stacks *sts)
 		ft_handle_p(&sts->b, &sts->a, "pa");
 }
 
-int main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_stacks sts;
 
@@ -70,6 +70,5 @@ int main(int ac, char **av)
 	else
 		ft_sort_infinite(&sts);
 	ft_free_stack(&sts);
-	//system("leaks push_swap");
 	return (0);
 }

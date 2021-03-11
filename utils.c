@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 16:05:37 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 10:31:34 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:19:06 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,46 +21,10 @@ int		ft_check_digit(char *s)
 	{
 		if (i == 0 && s[i] == '-' && ft_isdigit(s[i + 1]) && s[i + 1] != '0')
 			i++;
-		if (!ft_isdigit(s[i]))	
+		if (!ft_isdigit(s[i]))
 			return (0);
 	}
 	return (1);
-}
-
-void	ft_free_tab(char **s)
-{
-	int i;
-
-	i = -1;
-	while (s[++i])
-		free(s[i]);
-	free(s[i]);
-}
-
-void	ft_free_stack(t_stacks *sts)
-{
-	t_stack *tmp;
-
-	if (sts && sts->a)
-	{
-		while (sts->a)
-		{
-			tmp = sts->a->next;
-			free(sts->a);
-			sts->a = tmp;
-		}
-	}
-	if (sts && sts->b)
-	{
-		while (sts->b)
-		{
-			tmp = sts->b->next;
-			free(sts->b);
-			sts->b = tmp;
-		}
-	}
-	if (sts->args)
-		ft_free_tab(sts->args);
 }
 
 t_stack	*ft_get_last_node(t_stack *st)
@@ -81,7 +45,7 @@ int		ft_check_duplicate(t_stack *check, int val)
 	return (1);
 }
 
-int ft_parse_args(int ac, char **av, t_stacks *sts)
+int		ft_parse_args(int ac, char **av, t_stacks *sts)
 {
 	char	**tmp;
 	int		i;
@@ -97,7 +61,6 @@ int ft_parse_args(int ac, char **av, t_stacks *sts)
 		{
 			ft_putendl_fd("Error", 1);
 			ft_free_stack(sts);
-			//system("leaks push_swap");
 			return (0);
 		}
 		sts->len++;
@@ -105,7 +68,7 @@ int ft_parse_args(int ac, char **av, t_stacks *sts)
 	return (1);
 }
 
-int ft_create_node(char *s, t_stacks *sts)
+int		ft_create_node(char *s, t_stacks *sts)
 {
 	t_stack	*new;
 	int		val;

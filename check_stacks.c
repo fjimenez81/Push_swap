@@ -6,13 +6,13 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 17:22:12 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 18:28:02 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 19:55:29 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_check_stb(t_stacks *sts)
+void	ft_check_stb(t_stacks *sts)
 {
 	int max;
 
@@ -24,11 +24,11 @@ void ft_check_stb(t_stacks *sts)
 	ft_change_stack_b(sts, max);
 }
 
-void ft_check_sta(t_stacks *sts)
+void	ft_check_sta(t_stacks *sts)
 {
-	int c;
+	int		c;
 	t_stack *tmp;
-	
+
 	tmp = sts->a;
 	if (sts->b->elem < ft_check_minnum(tmp) ||
 		sts->b->elem > ft_check_maxnum(tmp))
@@ -48,11 +48,11 @@ void ft_check_sta(t_stacks *sts)
 	ft_change_stack_a(sts, c);
 }
 
-void ft_change_stack_a(t_stacks *sts, int max)
+void	ft_change_stack_a(t_stacks *sts, int max)
 {
 	int i;
 	int size;
-	
+
 	size = ft_stack_size(sts->a);
 	if (max <= size / 2)
 	{
@@ -68,7 +68,7 @@ void ft_change_stack_a(t_stacks *sts, int max)
 	}
 }
 
-void ft_change_stack_b(t_stacks *sts, int max)
+void	ft_change_stack_b(t_stacks *sts, int max)
 {
 	int i;
 	int size;
@@ -88,10 +88,10 @@ void ft_change_stack_b(t_stacks *sts, int max)
 	}
 }
 
-int ft_search_max(t_stacks *sts, int flag)
+int		ft_search_max(t_stacks *sts, int flag)
 {
 	t_stack *tmp;
-	int ret;
+	int		ret;
 
 	tmp = sts->b;
 	ret = 0;

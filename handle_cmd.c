@@ -6,13 +6,13 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 19:24:36 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 10:33:03 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 19:56:08 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_handle_s(t_stack **st, char *s)
+int	ft_handle_s(t_stack **st, char *s)
 {
 	int val;
 
@@ -28,7 +28,7 @@ int ft_handle_s(t_stack **st, char *s)
 	return (-1);
 }
 
-int ft_handle_p(t_stack **first, t_stack **second, char *s)
+int	ft_handle_p(t_stack **first, t_stack **second, char *s)
 {
 	if (*first)
 	{
@@ -40,7 +40,7 @@ int ft_handle_p(t_stack **first, t_stack **second, char *s)
 	return (-1);
 }
 
-int ft_handle_r(t_stack **st, char *s)
+int	ft_handle_r(t_stack **st, char *s)
 {
 	if (*st && (*st)->next)
 	{
@@ -52,7 +52,7 @@ int ft_handle_r(t_stack **st, char *s)
 	return (-1);
 }
 
-int ft_handle_rr(t_stack **st, char *s)
+int	ft_handle_rr(t_stack **st, char *s)
 {
 	if (*st && (*st)->next)
 	{

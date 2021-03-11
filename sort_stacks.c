@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_stacks.c                                   :+:      :+:    :+:   */
+/*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 17:18:40 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 17:20:05 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 19:58:01 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_sort_three(t_stacks *sts)
+void	ft_sort_three(t_stacks *sts)
 {
 	int min;
 
@@ -28,7 +28,7 @@ void ft_sort_three(t_stacks *sts)
 	}
 }
 
-void ft_sort_fourty(t_stacks *sts)
+void	ft_sort_fourty(t_stacks *sts)
 {
 	while (!ft_sorted(sts->a, 1) && ft_stack_size(sts->a) > 3)
 	{

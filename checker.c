@@ -6,13 +6,13 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:36:14 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 10:31:41 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 20:19:50 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_add_cmd_aux(char *line, t_stacks *sts, int len, int ret)
+int	ft_add_cmd_aux(char *line, t_stacks *sts, int len, int ret)
 {
 	if (len == 2 && (line[0] == 'r' && line[1] == 'a'))
 		ret = ft_handle_r(&sts->a, NULL);
@@ -29,7 +29,7 @@ int ft_add_cmd_aux(char *line, t_stacks *sts, int len, int ret)
 	return (ret);
 }
 
-int ft_add_cmd(char *line, t_stacks *sts)
+int	ft_add_cmd(char *line, t_stacks *sts)
 {
 	int len;
 	int ret;
@@ -52,9 +52,9 @@ int ft_add_cmd(char *line, t_stacks *sts)
 	return (ret);
 }
 
-int ft_check_elements(t_stacks *sts)
+int	ft_check_elements(t_stacks *sts)
 {
-	int val;
+	int		val;
 	t_stack *tmp;
 
 	if (sts->b != NULL)
@@ -71,11 +71,11 @@ int ft_check_elements(t_stacks *sts)
 	return (1);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	char *line;
-	t_stacks sts;
-	
+	char		*line;
+	t_stacks	sts;
+
 	if (!ft_parse_args(ac, av, &sts))
 		return (1);
 	while (get_next_line(0, &line))
@@ -85,7 +85,6 @@ int main(int ac, char **av)
 			ft_putendl_fd("Error", 1);
 			ft_free_stack(&sts);
 			free(line);
-			//system("leaks checker");
 			return (1);
 		}
 		if (line)
@@ -96,6 +95,5 @@ int main(int ac, char **av)
 	else
 		ft_putendl_fd("\033[1;32mOK", 1);
 	ft_free_stack(&sts);
-	//system("leaks checker");
 	return (0);
 }
