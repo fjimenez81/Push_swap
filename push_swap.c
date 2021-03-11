@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 09:41:40 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 18:31:00 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/11 18:34:53 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int ft_check_limit(t_stack *st, int limit)
 
 void ft_change_pack(t_stacks *sts, int limit)
 {
-	int max;
-
 	while (sts->a && ft_check_limit(sts->a, limit))
 	{
 		if (sts->a->elem <= limit)
@@ -40,8 +38,7 @@ void ft_change_pack(t_stacks *sts, int limit)
 		else
 			ft_handle_r(&sts->a, "ra");
 	}
-	max = ft_search_max(sts, 0);
-	ft_change_stack_b(sts, max);
+	ft_change_stack_b(sts, ft_search_max(sts, 0));
 }
 
 void ft_sort_infinite(t_stacks *sts)
