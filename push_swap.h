@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:30:15 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 20:18:30 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 19:04:59 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
 
 typedef struct		s_stack
 {

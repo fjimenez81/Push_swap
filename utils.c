@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 16:05:37 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 20:19:06 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 19:28:36 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ int		ft_parse_args(int ac, char **av, t_stacks *sts)
 	char	**tmp;
 	int		i;
 
+	if (ac == 1)
+		return (0);
 	ft_bzero(sts, sizeof(t_stacks));
 	if (ac == 2 && ft_strchr(av[1], ' '))
 		sts->args = ft_split(av[1], ' ');
@@ -74,7 +76,7 @@ int		ft_create_node(char *s, t_stacks *sts)
 	int		val;
 
 	val = ft_atoi(s);
-	if (!ft_check_duplicate(sts->a, val) ||
+	if (val > INT_MAX || val < INT_MIN || !ft_check_duplicate(sts->a, val) ||
 		!(new = (t_stack*)malloc(sizeof(t_stack))))
 		return (0);
 	new->elem = val;
