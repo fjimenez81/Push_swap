@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:30:15 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/14 19:04:59 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:52:18 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int					ft_handle_r(t_stack **st, char *s);
 int					ft_handle_rr(t_stack **st, char *s);
 int					ft_check_maxnum(t_stack *st);
 int					ft_check_minnum(t_stack *st);
+int64_t				ft_ctm_atoi(const char *s);
 int					ft_sorted(t_stack *st, int flag);
 int					ft_stack_size(t_stack *st);
 void				ft_search_min(t_stacks *sts);

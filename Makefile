@@ -6,7 +6,7 @@
 #    By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 09:37:43 by fjimenez          #+#    #+#              #
-#    Updated: 2021/03/11 20:10:59 by fjimenez         ###   ########.fr        #
+#    Updated: 2021/03/14 20:23:15 by fjimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,13 @@ RM = rm -rf
 
 SRC_CHECKER =	checker \
 				utils \
+				utils2 \
 				push_stack \
 				pop_stack \
 				handle_cmd \
 				free_stacks \
+				sort_stacks \
+				check_stacks \
 
 SRC_PUSH_SWAP = push_swap \
 				utils \

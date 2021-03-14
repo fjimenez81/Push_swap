@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 16:05:37 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/14 19:41:57 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:50:46 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,9 @@ int		ft_parse_args(int ac, char **av, t_stacks *sts)
 int		ft_create_node(char *s, t_stacks *sts)
 {
 	t_stack	*new;
-	int		val;
+	int64_t	val;
 
-	val = ft_atoi(s);
+	val = ft_ctm_atoi(s);
 	if (val > INT_MAX || val < INT_MIN || !ft_check_duplicate(sts->a, val) ||
 		!(new = (t_stack*)malloc(sizeof(t_stack))))
 		return (0);
