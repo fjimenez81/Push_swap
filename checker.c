@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:36:14 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/14 18:33:37 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 19:42:29 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	main(int ac, char **av)
 	{
 		if (!ft_add_cmd(line, &sts))
 		{
-			ft_putendl_fd("Error", 1);
+			ft_putendl_fd("Error", 2);
 			ft_free_stack(&sts);
 			free(line);
 			return (1);

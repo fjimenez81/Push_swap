@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 16:05:37 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/14 19:28:36 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 19:41:57 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_parse_args(int ac, char **av, t_stacks *sts)
 	{
 		if (!ft_check_digit(tmp[i]) || !ft_create_node(tmp[i], sts))
 		{
-			ft_putendl_fd("Error", 1);
+			ft_putendl_fd("Error", 2);
 			ft_free_stack(sts);
 			return (0);
 		}
