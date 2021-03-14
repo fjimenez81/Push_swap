@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:36:14 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 20:19:50 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/14 18:33:37 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,19 @@ int	ft_add_cmd_aux(char *line, t_stacks *sts, int len, int ret)
 	else if (len == 2 && (line[0] == 'r' && line[1] == 'b'))
 		ret = ft_handle_r(&sts->b, NULL);
 	else if (len == 2 && (line[0] == 'r' && line[1] == 'r'))
+	{
 		ret = ft_handle_r(&sts->a, NULL);
+		ret = ft_handle_r(&sts->b, NULL);
+	}
 	else if (len == 3 && (line[0] == 'r' && line[1] == 'r' && line[2] == 'a'))
 		ret = ft_handle_rr(&sts->a, NULL);
 	else if (len == 3 && (line[0] == 'r' && line[1] == 'r' && line[2] == 'b'))
 		ret = ft_handle_rr(&sts->b, NULL);
 	else if (len == 3 && (line[0] == 'r' && line[1] == 'r' && line[2] == 'r'))
+	{
 		ret = ft_handle_rr(&sts->a, NULL);
+		ret = ft_handle_rr(&sts->b, NULL);
+	}
 	return (ret);
 }
 
@@ -41,7 +47,10 @@ int	ft_add_cmd(char *line, t_stacks *sts)
 	else if (len == 2 && (line[0] == 's' && line[1] == 'b'))
 		ret = ft_handle_s(&sts->b, NULL);
 	else if (len == 2 && (line[0] == 's' && line[1] == 's'))
+	{
 		ret = ft_handle_s(&sts->a, NULL);
+		ret = ft_handle_s(&sts->b, NULL);
+	}
 	else if (len == 2 && (line[0] == 'p' && line[1] == 'a'))
 		ret = ft_handle_p(&sts->b, &sts->a, NULL);
 	else if (len == 2 && (line[0] == 'p' && line[1] == 'b'))
