@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 09:41:40 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 20:19:18 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/15 10:47:43 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_sort_infinite(t_stacks *sts)
 	int i;
 
 	div = (sts->len <= 200) ? 5 : 11;
-	pack = (ft_check_maxnum(sts->a) - ft_check_minnum(sts->a) / div);
+	pack = (ft_check_maxnum(sts->a) - ft_check_minnum(sts->a)) / div;
 	i = 0;
 	while (++i < div)
 		ft_change_pack(sts, pack * i);

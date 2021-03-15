@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 17:22:12 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/11 19:55:29 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/15 10:42:15 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,8 @@ int		ft_search_max(t_stacks *sts, int flag)
 
 	tmp = sts->b;
 	ret = 0;
-	sts->max = ft_check_maxnum(sts->b);
+	if (!flag)
+		sts->max = ft_check_maxnum(sts->b);
 	while (tmp)
 	{
 		if (flag)
