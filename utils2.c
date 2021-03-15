@@ -6,7 +6,7 @@
 /*   By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 10:29:02 by fjimenez          #+#    #+#             */
-/*   Updated: 2021/03/14 20:57:15 by fjimenez         ###   ########.fr       */
+/*   Updated: 2021/03/15 09:24:19 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,26 +104,4 @@ void	ft_search_min(t_stacks *sts)
 		tmp = tmp->next;
 	}
 	ft_change_stack_a(sts, c);
-}
-
-int64_t	ft_ctm_atoi(const char *s)
-{
-	int64_t	val;
-	int		i;
-	int		sign;
-
-	sign = 1;
-	i = 0;
-	if (s[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	val = 0;
-	while (s[i] && ft_isdigit(s[i]))
-	{
-		val = val * 10 + (s[i] - '0');
-		i++;
-	}
-	return (val * sign);
 }
